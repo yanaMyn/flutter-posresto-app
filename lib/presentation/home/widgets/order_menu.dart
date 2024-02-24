@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_posresto_app/presentation/home/bloc/checkout/checkout_bloc.dart';
+import 'package:flutter_posresto_app/presentation/home/models/product_quantity.dart';
 
 import '../../../../components/components.dart';
 import '../../../../core/core.dart';
-import '../models/order_item.dart';
 
 class OrderMenu extends StatelessWidget {
-  final OrderItem data;
+  final ProductQuantity data;
   const OrderMenu({super.key, required this.data});
 
   @override
@@ -21,23 +23,26 @@ class OrderMenu extends StatelessWidget {
                 contentPadding: EdgeInsets.zero,
                 leading: ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(50.0)),
-                  child: Image.asset(
-                    data.product.image,
+                  child: Image.network(
+                    data.product.image!.contains('http')
+                        ? data.product.image!
+                        : 'http://192.168.1.5:8000/${data.product.image!}',
                     width: 40.0,
                     height: 40.0,
                     fit: BoxFit.cover,
                   ),
                 ),
                 title: FittedBox(
-                  child: Text(data.product.name,
+                  child: Text(data.product.name!,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                       )),
                 ),
-                subtitle: Text(data.product.priceFormat),
+                subtitle: Text(
+                    data.product.price!.toIntegerFromText.currencyFormatRp),
               ),
             ),
             // SizedBox(
@@ -65,6 +70,9 @@ class OrderMenu extends StatelessWidget {
                     //   // data.quantity--;
                     //   // setState(() {});
                     // }
+                    context
+                        .read<CheckoutBloc>()
+                        .add(CheckoutEvent.removeItem(data.product));
                   },
                   child: Container(
                     width: 30,
@@ -91,6 +99,9 @@ class OrderMenu extends StatelessWidget {
                     //     onDeleteTap();
                     // data.quantity++;
                     // setState(() {});
+                    context
+                        .read<CheckoutBloc>()
+                        .add(CheckoutEvent.addItem(data.product));
                   },
                   child: Container(
                     width: 30,
@@ -108,7 +119,8 @@ class OrderMenu extends StatelessWidget {
             SizedBox(
               width: 80.0,
               child: Text(
-                (data.product.price * data.quantity).currencyFormatRp,
+                (data.product.price!.toIntegerFromText * data.quantity)
+                    .currencyFormatRp,
                 textAlign: TextAlign.right,
                 style: const TextStyle(
                   color: AppColors.primary,

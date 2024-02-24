@@ -1,4 +1,7 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
 
 class ProductResponseModel {
   final String? status;
@@ -131,6 +134,40 @@ class Product {
         "createdAt": createdAt?.toIso8601String(),
         "updatedAt": updatedAt?.toIso8601String(),
       };
+
+  @override
+  bool operator ==(covariant Product other) {
+    if (identical(this, other)) return true;
+
+    return other.id == id &&
+        other.categoryId == categoryId &&
+        other.name == name &&
+        other.description == description &&
+        other.image == image &&
+        other.price == price &&
+        other.stock == stock &&
+        other.status == status &&
+        other.isFavorite == isFavorite &&
+        other.createdAt == createdAt &&
+        other.updatedAt == updatedAt &&
+        other.category == category;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        categoryId.hashCode ^
+        name.hashCode ^
+        description.hashCode ^
+        image.hashCode ^
+        price.hashCode ^
+        stock.hashCode ^
+        status.hashCode ^
+        isFavorite.hashCode ^
+        createdAt.hashCode ^
+        updatedAt.hashCode ^
+        category.hashCode;
+  }
 }
 
 class Category {

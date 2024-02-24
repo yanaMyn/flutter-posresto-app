@@ -3,8 +3,8 @@ import 'package:flutter_posresto_app/data/home/home_repository.dart';
 import 'package:flutter_posresto_app/data/product/models/product_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../data/auth/models/auth_response_model.dart';
-import '../../../data/auth/repositories/auth_repository.dart';
+import '../../../../data/auth/models/auth_response_model.dart';
+import '../../../../data/auth/repositories/auth_repository.dart';
 
 part 'dashboard_event.dart';
 part 'dashboard_state.dart';

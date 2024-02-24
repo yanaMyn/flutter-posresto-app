@@ -6,7 +6,7 @@ import 'package:flutter_posresto_app/presentation/settings/pages/sync_data_page.
 import '../../../core/assets/assets.gen.dart';
 import '../../../core/constants/colors.dart';
 import '../../auth/login_page.dart';
-import '../bloc/dashboard_bloc.dart';
+import '../bloc/dashboard/dashboard_bloc.dart';
 import '../widgets/nav_item.dart';
 
 class DashboarPage extends StatefulWidget {

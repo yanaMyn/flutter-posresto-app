@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/auth/models/auth_response_model.dart';
-import '../home/bloc/dashboard_bloc.dart';
+import '../home/bloc/dashboard/dashboard_bloc.dart';
 import 'login_page.dart';
 
 class LogoutPage extends StatefulWidget {
