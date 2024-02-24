@@ -2,9 +2,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:flutter_posresto_app/data/models/auth_response_model.dart';
-
-import '../../../data/repositories/auth_repository.dart';
+import '../../../data/auth/models/auth_response_model.dart';
+import '../../../data/auth/repositories/auth_repository.dart';
 
 part 'login_bloc.freezed.dart';
 part 'login_event.dart';

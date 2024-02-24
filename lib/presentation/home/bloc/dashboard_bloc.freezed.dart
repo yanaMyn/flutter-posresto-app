@@ -21,6 +21,7 @@ mixin _$DashboardEvent {
     required TResult Function() started,
     required TResult Function() didLoad,
     required TResult Function() logout,
+    required TResult Function() getLocalProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$DashboardEvent {
     TResult? Function()? started,
     TResult? Function()? didLoad,
     TResult? Function()? logout,
+    TResult? Function()? getLocalProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$DashboardEvent {
     TResult Function()? started,
     TResult Function()? didLoad,
     TResult Function()? logout,
+    TResult Function()? getLocalProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$DashboardEvent {
     required TResult Function(_Started value) started,
     required TResult Function(_DidLoad value) didLoad,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GetLocalProduct value) getLocalProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$DashboardEvent {
     TResult? Function(_Started value)? started,
     TResult? Function(_DidLoad value)? didLoad,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GetLocalProduct value)? getLocalProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$DashboardEvent {
     TResult Function(_Started value)? started,
     TResult Function(_DidLoad value)? didLoad,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GetLocalProduct value)? getLocalProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,6 +127,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() started,
     required TResult Function() didLoad,
     required TResult Function() logout,
+    required TResult Function() getLocalProduct,
   }) {
     return started();
   }
@@ -131,6 +138,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? started,
     TResult? Function()? didLoad,
     TResult? Function()? logout,
+    TResult? Function()? getLocalProduct,
   }) {
     return started?.call();
   }
@@ -141,6 +149,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? started,
     TResult Function()? didLoad,
     TResult Function()? logout,
+    TResult Function()? getLocalProduct,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -155,6 +164,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(_DidLoad value) didLoad,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GetLocalProduct value) getLocalProduct,
   }) {
     return started(this);
   }
@@ -165,6 +175,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(_Started value)? started,
     TResult? Function(_DidLoad value)? didLoad,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GetLocalProduct value)? getLocalProduct,
   }) {
     return started?.call(this);
   }
@@ -175,6 +186,7 @@ class _$StartedImpl implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_DidLoad value)? didLoad,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GetLocalProduct value)? getLocalProduct,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -229,6 +241,7 @@ class _$DidLoadImpl implements _DidLoad {
     required TResult Function() started,
     required TResult Function() didLoad,
     required TResult Function() logout,
+    required TResult Function() getLocalProduct,
   }) {
     return didLoad();
   }
@@ -239,6 +252,7 @@ class _$DidLoadImpl implements _DidLoad {
     TResult? Function()? started,
     TResult? Function()? didLoad,
     TResult? Function()? logout,
+    TResult? Function()? getLocalProduct,
   }) {
     return didLoad?.call();
   }
@@ -249,6 +263,7 @@ class _$DidLoadImpl implements _DidLoad {
     TResult Function()? started,
     TResult Function()? didLoad,
     TResult Function()? logout,
+    TResult Function()? getLocalProduct,
     required TResult orElse(),
   }) {
     if (didLoad != null) {
@@ -263,6 +278,7 @@ class _$DidLoadImpl implements _DidLoad {
     required TResult Function(_Started value) started,
     required TResult Function(_DidLoad value) didLoad,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GetLocalProduct value) getLocalProduct,
   }) {
     return didLoad(this);
   }
@@ -273,6 +289,7 @@ class _$DidLoadImpl implements _DidLoad {
     TResult? Function(_Started value)? started,
     TResult? Function(_DidLoad value)? didLoad,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GetLocalProduct value)? getLocalProduct,
   }) {
     return didLoad?.call(this);
   }
@@ -283,6 +300,7 @@ class _$DidLoadImpl implements _DidLoad {
     TResult Function(_Started value)? started,
     TResult Function(_DidLoad value)? didLoad,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GetLocalProduct value)? getLocalProduct,
     required TResult orElse(),
   }) {
     if (didLoad != null) {
@@ -337,6 +355,7 @@ class _$LogoutImpl implements _Logout {
     required TResult Function() started,
     required TResult Function() didLoad,
     required TResult Function() logout,
+    required TResult Function() getLocalProduct,
   }) {
     return logout();
   }
@@ -347,6 +366,7 @@ class _$LogoutImpl implements _Logout {
     TResult? Function()? started,
     TResult? Function()? didLoad,
     TResult? Function()? logout,
+    TResult? Function()? getLocalProduct,
   }) {
     return logout?.call();
   }
@@ -357,6 +377,7 @@ class _$LogoutImpl implements _Logout {
     TResult Function()? started,
     TResult Function()? didLoad,
     TResult Function()? logout,
+    TResult Function()? getLocalProduct,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -371,6 +392,7 @@ class _$LogoutImpl implements _Logout {
     required TResult Function(_Started value) started,
     required TResult Function(_DidLoad value) didLoad,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GetLocalProduct value) getLocalProduct,
   }) {
     return logout(this);
   }
@@ -381,6 +403,7 @@ class _$LogoutImpl implements _Logout {
     TResult? Function(_Started value)? started,
     TResult? Function(_DidLoad value)? didLoad,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GetLocalProduct value)? getLocalProduct,
   }) {
     return logout?.call(this);
   }
@@ -391,6 +414,7 @@ class _$LogoutImpl implements _Logout {
     TResult Function(_Started value)? started,
     TResult Function(_DidLoad value)? didLoad,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GetLocalProduct value)? getLocalProduct,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -405,6 +429,120 @@ abstract class _Logout implements DashboardEvent {
 }
 
 /// @nodoc
+abstract class _$$GetLocalProductImplCopyWith<$Res> {
+  factory _$$GetLocalProductImplCopyWith(_$GetLocalProductImpl value,
+          $Res Function(_$GetLocalProductImpl) then) =
+      __$$GetLocalProductImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetLocalProductImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$GetLocalProductImpl>
+    implements _$$GetLocalProductImplCopyWith<$Res> {
+  __$$GetLocalProductImplCopyWithImpl(
+      _$GetLocalProductImpl _value, $Res Function(_$GetLocalProductImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetLocalProductImpl implements _GetLocalProduct {
+  const _$GetLocalProductImpl();
+
+  @override
+  String toString() {
+    return 'DashboardEvent.getLocalProduct()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetLocalProductImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() didLoad,
+    required TResult Function() logout,
+    required TResult Function() getLocalProduct,
+  }) {
+    return getLocalProduct();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? didLoad,
+    TResult? Function()? logout,
+    TResult? Function()? getLocalProduct,
+  }) {
+    return getLocalProduct?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? didLoad,
+    TResult Function()? logout,
+    TResult Function()? getLocalProduct,
+    required TResult orElse(),
+  }) {
+    if (getLocalProduct != null) {
+      return getLocalProduct();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_DidLoad value) didLoad,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_GetLocalProduct value) getLocalProduct,
+  }) {
+    return getLocalProduct(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DidLoad value)? didLoad,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_GetLocalProduct value)? getLocalProduct,
+  }) {
+    return getLocalProduct?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_DidLoad value)? didLoad,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_GetLocalProduct value)? getLocalProduct,
+    required TResult orElse(),
+  }) {
+    if (getLocalProduct != null) {
+      return getLocalProduct(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetLocalProduct implements DashboardEvent {
+  const factory _GetLocalProduct() = _$GetLocalProductImpl;
+}
+
+/// @nodoc
 mixin _$DashboardState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -413,6 +551,7 @@ mixin _$DashboardState {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -422,6 +561,7 @@ mixin _$DashboardState {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -431,6 +571,7 @@ mixin _$DashboardState {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -441,6 +582,7 @@ mixin _$DashboardState {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -450,6 +592,7 @@ mixin _$DashboardState {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -459,6 +602,7 @@ mixin _$DashboardState {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -525,6 +669,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) {
     return initial();
   }
@@ -537,6 +682,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) {
     return initial?.call();
   }
@@ -549,6 +695,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -565,6 +712,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) {
     return initial(this);
   }
@@ -577,6 +725,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) {
     return initial?.call(this);
   }
@@ -589,6 +738,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -645,6 +795,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) {
     return loading();
   }
@@ -657,6 +808,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) {
     return loading?.call();
   }
@@ -669,6 +821,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -685,6 +838,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) {
     return loading(this);
   }
@@ -697,6 +851,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) {
     return loading?.call(this);
   }
@@ -709,6 +864,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -792,6 +948,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) {
     return success(authResponseModel);
   }
@@ -804,6 +961,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) {
     return success?.call(authResponseModel);
   }
@@ -816,6 +974,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -832,6 +991,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) {
     return success(this);
   }
@@ -844,6 +1004,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) {
     return success?.call(this);
   }
@@ -856,6 +1017,7 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -944,6 +1106,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) {
     return error(message);
   }
@@ -956,6 +1119,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) {
     return error?.call(message);
   }
@@ -968,6 +1132,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -984,6 +1149,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) {
     return error(this);
   }
@@ -996,6 +1162,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) {
     return error?.call(this);
   }
@@ -1008,6 +1175,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1069,6 +1237,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     required TResult Function(AuthResponseModel authResponseModel) success,
     required TResult Function(String message) error,
     required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
   }) {
     return logoutSuccess();
   }
@@ -1081,6 +1250,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult? Function(AuthResponseModel authResponseModel)? success,
     TResult? Function(String message)? error,
     TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
   }) {
     return logoutSuccess?.call();
   }
@@ -1093,6 +1263,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult Function(AuthResponseModel authResponseModel)? success,
     TResult Function(String message)? error,
     TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -1109,6 +1280,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
     required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
   }) {
     return logoutSuccess(this);
   }
@@ -1121,6 +1293,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
     TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
   }) {
     return logoutSuccess?.call(this);
   }
@@ -1133,6 +1306,7 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -1144,4 +1318,170 @@ class _$LogoutSuccessImpl implements _LogoutSuccess {
 
 abstract class _LogoutSuccess implements DashboardState {
   const factory _LogoutSuccess() = _$LogoutSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessGetProductImplCopyWith<$Res> {
+  factory _$$SuccessGetProductImplCopyWith(_$SuccessGetProductImpl value,
+          $Res Function(_$SuccessGetProductImpl) then) =
+      __$$SuccessGetProductImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Product> products});
+}
+
+/// @nodoc
+class __$$SuccessGetProductImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$SuccessGetProductImpl>
+    implements _$$SuccessGetProductImplCopyWith<$Res> {
+  __$$SuccessGetProductImplCopyWithImpl(_$SuccessGetProductImpl _value,
+      $Res Function(_$SuccessGetProductImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? products = null,
+  }) {
+    return _then(_$SuccessGetProductImpl(
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessGetProductImpl implements _SuccessGetProduct {
+  const _$SuccessGetProductImpl(final List<Product> products)
+      : _products = products;
+
+  final List<Product> _products;
+  @override
+  List<Product> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
+
+  @override
+  String toString() {
+    return 'DashboardState.successGetProduct(products: $products)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessGetProductImpl &&
+            const DeepCollectionEquality().equals(other._products, _products));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessGetProductImplCopyWith<_$SuccessGetProductImpl> get copyWith =>
+      __$$SuccessGetProductImplCopyWithImpl<_$SuccessGetProductImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(AuthResponseModel authResponseModel) success,
+    required TResult Function(String message) error,
+    required TResult Function() logoutSuccess,
+    required TResult Function(List<Product> products) successGetProduct,
+  }) {
+    return successGetProduct(products);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AuthResponseModel authResponseModel)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? logoutSuccess,
+    TResult? Function(List<Product> products)? successGetProduct,
+  }) {
+    return successGetProduct?.call(products);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(AuthResponseModel authResponseModel)? success,
+    TResult Function(String message)? error,
+    TResult Function()? logoutSuccess,
+    TResult Function(List<Product> products)? successGetProduct,
+    required TResult orElse(),
+  }) {
+    if (successGetProduct != null) {
+      return successGetProduct(products);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_LogoutSuccess value) logoutSuccess,
+    required TResult Function(_SuccessGetProduct value) successGetProduct,
+  }) {
+    return successGetProduct(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_LogoutSuccess value)? logoutSuccess,
+    TResult? Function(_SuccessGetProduct value)? successGetProduct,
+  }) {
+    return successGetProduct?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_LogoutSuccess value)? logoutSuccess,
+    TResult Function(_SuccessGetProduct value)? successGetProduct,
+    required TResult orElse(),
+  }) {
+    if (successGetProduct != null) {
+      return successGetProduct(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SuccessGetProduct implements DashboardState {
+  const factory _SuccessGetProduct(final List<Product> products) =
+      _$SuccessGetProductImpl;
+
+  List<Product> get products;
+  @JsonKey(ignore: true)
+  _$$SuccessGetProductImplCopyWith<_$SuccessGetProductImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

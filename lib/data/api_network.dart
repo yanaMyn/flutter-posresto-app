@@ -1,6 +1,6 @@
 class APINetwork {
   APINetwork({required this.path, String? baseUrl})
-      : baseUrl = baseUrl ?? "http://192.168.1.8:8000/api";
+      : baseUrl = baseUrl ?? "http://192.168.1.5:8000/api";
 
   String baseUrl;
   String path;

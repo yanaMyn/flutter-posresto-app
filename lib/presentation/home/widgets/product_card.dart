@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_posresto_app/data/api_network.dart';
 
 import '../../../../components/components.dart';
 import '../../../../core/core.dart';
-import '../models/product_model.dart';
+import '../../../data/product/models/product_response_model.dart';
 
 class ProductCard extends StatelessWidget {
-  final ProductModel data;
+  final Product data;
   final VoidCallback onCartButton;
 
   const ProductCard({
@@ -43,18 +44,21 @@ class ProductCard extends StatelessWidget {
                   ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(40.0)),
-                    child: Image.asset(
-                      data.image,
+                    child: Image.network(
+                      data.image!.contains('http')
+                          ? data.image!
+                          : 'http://192.168.1.5:8000/${data.image!}',
                       width: 50,
                       height: 50,
-                      fit: BoxFit.cover,
+                      fit: BoxFit
+                          .cover, //http://192.168.1.8:8000/storage/products/32.png
                     ),
                   ),
                 ),
                 const Spacer(),
                 FittedBox(
                   child: Text(
-                    data.name,
+                    data.name!,
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
@@ -70,7 +74,7 @@ class ProductCard extends StatelessWidget {
                     Flexible(
                       child: FittedBox(
                         child: Text(
-                          data.category.value,
+                          data.category!.name ?? "-",
                           style: const TextStyle(
                             color: AppColors.grey,
                             fontSize: 12,
@@ -81,7 +85,7 @@ class ProductCard extends StatelessWidget {
                     Flexible(
                       child: FittedBox(
                         child: Text(
-                          data.priceFormat,
+                          data.price!.toIntegerFromText.currencyFormatRp,
                           style: const TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 12,

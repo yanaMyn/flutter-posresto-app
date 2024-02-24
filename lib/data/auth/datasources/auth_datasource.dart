@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_posresto_app/data/models/auth_response_model.dart';
+
+import '../models/auth_response_model.dart';
 
 abstract class AuthDataSource {
   Future<Either<String, AuthResponseModel>> login(

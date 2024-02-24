@@ -1,10 +1,10 @@
 import "package:dartz/dartz.dart";
 import "package:flutter/material.dart";
-import "package:flutter_posresto_app/data/datasources/auth_datasource.dart";
-import "package:flutter_posresto_app/data/models/auth_response_model.dart";
 import "package:http/http.dart" as http;
 
-import "../api_network.dart";
+import "../../api_network.dart";
+import "../models/auth_response_model.dart";
+import "auth_datasource.dart";
 
 class AuthRemoteDataSource extends AuthDataSource {
   @override

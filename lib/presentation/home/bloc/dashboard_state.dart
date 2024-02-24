@@ -8,4 +8,6 @@ class DashboardState with _$DashboardState {
       _Success;
   const factory DashboardState.error(String message) = _Error;
   const factory DashboardState.logoutSuccess() = _LogoutSuccess;
+  const factory DashboardState.successGetProduct(List<Product> products) =
+      _SuccessGetProduct;
 }
