@@ -4,11 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_posresto_app/presentation/auth/bloc/login_bloc.dart';
 import 'package:flutter_posresto_app/presentation/auth/login_page.dart';
 import 'package:flutter_posresto_app/presentation/home/bloc/checkout/checkout_bloc.dart';
+import 'package:flutter_posresto_app/presentation/home/bloc/order/bloc/order_bloc.dart';
 import 'package:flutter_posresto_app/presentation/home/pages/dashboard_page.dart';
-import 'package:flutter_posresto_app/presentation/settings/bloc/sync_product_bloc.dart';
+import 'package:flutter_posresto_app/presentation/settings/bloc/syncOrder/bloc/sync_order_bloc.dart';
 
 import 'data/auth/repositories/auth_repository.dart';
 import 'presentation/home/bloc/dashboard/dashboard_bloc.dart';
+import 'presentation/settings/bloc/syncProduct/sync_product_bloc.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([
@@ -40,6 +42,12 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CheckoutBloc(),
+        ),
+        BlocProvider(
+          create: (context) => OrderBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SyncOrderBloc(),
         ),
       ],
       child: MaterialApp(

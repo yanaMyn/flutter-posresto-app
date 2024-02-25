@@ -86,6 +86,11 @@ class Product {
             : Category.fromMap(json["category"]),
       );
 
+  factory Product.fromOrderMap(Map<String, dynamic> json) => Product(
+        id: json["id_product"],
+        price: json["price"].toString(),
+      );
+
   factory Product.fromLocalMap(Map<String, dynamic> json) => Product(
         id: json["productId"],
         categoryId: json["categoryId"],
@@ -97,7 +102,7 @@ class Product {
         stock: json["stock"],
         status: json["status"],
         isFavorite: json["isFavorite"],
-        createdAt: json["created_at"] == null
+        createdAt: json["createdAt"] == null
             ? null
             : DateTime.parse(json["createdAt"]),
         updatedAt: json["updatedAt"] == null
