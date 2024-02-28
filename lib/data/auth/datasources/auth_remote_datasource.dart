@@ -18,7 +18,6 @@ class AuthRemoteDataSource extends AuthDataSource {
       const Duration(seconds: 30),
     );
 
-    debugPrint(apiNetwork.uri);
     if (response.statusCode == 200) {
       return Right(AuthResponseModel.fromJson(response.body));
     } else {
@@ -38,7 +37,6 @@ class AuthRemoteDataSource extends AuthDataSource {
           const Duration(seconds: 10),
         );
 
-    debugPrint(apiNetwork.uri);
     if (response.statusCode == 200) {
       return const Right(true);
     } else {

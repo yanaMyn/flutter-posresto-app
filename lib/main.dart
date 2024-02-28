@@ -6,6 +6,7 @@ import 'package:flutter_posresto_app/presentation/auth/login_page.dart';
 import 'package:flutter_posresto_app/presentation/home/bloc/checkout/checkout_bloc.dart';
 import 'package:flutter_posresto_app/presentation/home/bloc/order/bloc/order_bloc.dart';
 import 'package:flutter_posresto_app/presentation/home/pages/dashboard_page.dart';
+import 'package:flutter_posresto_app/presentation/settings/bloc/discount/discount_bloc.dart';
 import 'package:flutter_posresto_app/presentation/settings/bloc/syncOrder/bloc/sync_order_bloc.dart';
 
 import 'data/auth/repositories/auth_repository.dart';
@@ -48,6 +49,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SyncOrderBloc(),
+        ),
+        BlocProvider(
+          create: (context) => DiscountBloc(),
         ),
       ],
       child: MaterialApp(

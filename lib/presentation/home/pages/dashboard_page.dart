@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_posresto_app/core/extensions/build_context_ext.dart';
 import 'package:flutter_posresto_app/presentation/home/pages/home_page.dart';
-import 'package:flutter_posresto_app/presentation/settings/pages/sync_data_page.dart';
+import 'package:flutter_posresto_app/presentation/settings/pages/settings_page.dart';
 import '../../../core/assets/assets.gen.dart';
 import '../../../core/constants/colors.dart';
 import '../../auth/login_page.dart';
@@ -24,7 +24,8 @@ class _DashboarPageState extends State<DashboarPage> {
     // const Center(child: Text('This is page 1')),
     const Center(child: Text('This is page 2')),
     const Center(child: Text('This is page 3')),
-    const SyncDataPage(),
+    // const SyncDataPage(),
+    const SettingsPage(),
   ];
 
   void _onItemTapped(int index) {

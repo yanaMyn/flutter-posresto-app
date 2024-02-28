@@ -48,11 +48,11 @@ class ProductCard extends StatelessWidget {
                     child: Image.network(
                       data.image!.contains('http')
                           ? data.image!
-                          : 'http://192.168.1.5:8000/${data.image!}',
+                          : 'http://192.168.1.4:8000/${data.image!}',
                       width: 50,
                       height: 50,
                       fit: BoxFit
-                          .cover, //http://192.168.1.8:8000/storage/products/32.png
+                          .cover, //http://192.168.1.4:8000/storage/products/32.png
                     ),
                   ),
                 ),

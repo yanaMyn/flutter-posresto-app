@@ -26,7 +26,7 @@ class OrderMenu extends StatelessWidget {
                   child: Image.network(
                     data.product.image!.contains('http')
                         ? data.product.image!
-                        : 'http://192.168.1.5:8000/${data.product.image!}',
+                        : 'http://192.168.1.4:8000/${data.product.image!}',
                     width: 40.0,
                     height: 40.0,
                     fit: BoxFit.cover,
