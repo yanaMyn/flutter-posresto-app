@@ -26,5 +26,21 @@ class DiscountBloc extends Bloc<DiscountEvent, DiscountState> {
         ),
       );
     });
+
+    on<_AddDiscount>((event, emit) async {
+      emit(const _Loading());
+      final result = await this
+          .discountRepository
+          .addDiscount(event.name, event.description, event.value);
+      result.fold(
+        (l) => emit(
+          _Error(l),
+        ),
+        (r) {
+          const _SuccessAddedDiscount("success added discount");
+          add(const _GetDiscounts());
+        },
+      );
+    });
   }
 }

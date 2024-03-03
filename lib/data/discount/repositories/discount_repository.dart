@@ -19,4 +19,14 @@ class DiscountRepository {
     }
     return const Left('Failed to get token');
   }
+
+  Future<Either<String, bool>> addDiscount(
+      String name, String description, int value) async {
+    final authResponseModel = await authLocalDatasource.getAuthData();
+    if (authResponseModel.token != null) {
+      return discountDataSource.addDiscount(
+          name, description, value, authResponseModel.token!);
+    }
+    return const Left('Failed to get token');
+  }
 }

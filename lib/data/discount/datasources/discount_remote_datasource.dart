@@ -23,4 +23,30 @@ class DiscountRemoteDataSource extends DiscountDataSource {
       return const Left('Failed to get discounts');
     }
   }
+
+  @override
+  Future<Either<String, bool>> addDiscount(
+      String name, String description, int value, String token) async {
+    final APINetwork apiNetwork = APINetwork(path: "discount");
+    apiNetwork.headers['Authorization'] = 'Bearer $token';
+
+    final response = await http.post(
+      Uri.parse(apiNetwork.uri),
+      headers: {'Authorization': 'Bearer $token', 'Accept': 'application/json'},
+      body: {
+        'name': name,
+        'description': description,
+        'value': value.toString(),
+        'type': 'percentage',
+      },
+    ).timeout(
+      const Duration(seconds: 30),
+    );
+
+    if (response.statusCode == 200) {
+      return const Right(true);
+    } else {
+      return const Left('Failed to add discounts');
+    }
+  }
 }
