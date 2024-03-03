@@ -43,18 +43,6 @@ class ProductCard extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: AppColors.disabled.withOpacity(0.4),
                   ),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(40.0)),
-                    child: Image.network(
-                      data.image!.contains('http')
-                          ? data.image!
-                          : 'http://192.168.1.4:8000/${data.image!}',
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit
-                          .cover, //http://192.168.1.4:8000/storage/products/32.png
-                    ),
-                  ),
                 ),
                 const Spacer(),
                 FittedBox(
@@ -102,7 +90,7 @@ class ProductCard extends StatelessWidget {
               builder: (context, state) {
                 return state.maybeWhen(
                   orElse: () => const SizedBox(),
-                  loaded: (products) {
+                  loaded: (products, discount, tax, serviceCharge) {
                     return products.any((element) => element.product == data)
                         ? products
                                     .firstWhere(

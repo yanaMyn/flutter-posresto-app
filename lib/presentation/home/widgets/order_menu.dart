@@ -21,17 +21,6 @@ class OrderMenu extends StatelessWidget {
             Flexible(
               child: ListTile(
                 contentPadding: EdgeInsets.zero,
-                leading: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(50.0)),
-                  child: Image.network(
-                    data.product.image!.contains('http')
-                        ? data.product.image!
-                        : 'http://192.168.1.4:8000/${data.product.image!}',
-                    width: 40.0,
-                    height: 40.0,
-                    fit: BoxFit.cover,
-                  ),
-                ),
                 title: FittedBox(
                   child: Text(data.product.name!,
                       maxLines: 2,

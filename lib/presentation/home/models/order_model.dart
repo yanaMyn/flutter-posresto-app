@@ -71,25 +71,19 @@ class OrderModel {
 
   factory OrderModel.fromMap(Map<String, dynamic> map) {
     return OrderModel(
-      id: map['id'] != null ? map['id'] as int : null,
-      subTotal: map['sub_total'] != null ? map['sub_total'] as int : null,
-      paymentAmount:
-          map['payment_amount'] != null ? map['payment_amount'] as int : null,
-      tax: map['tax'] != null ? map['tax'] as int : null,
-      discount: map['discount'] != null ? map['discount'] as int : null,
-      serviceCharge:
-          map['service_charge'] != null ? map['service_charge'] as int : null,
-      total: map['total'] != null ? map['total'] as int : null,
-      paymentMethod: map['payment_method'] != null
-          ? map['payment_method'] as String
-          : null,
-      totalItem: map['total_item'] != null ? map['total_item'] as int : null,
-      idKasir: map['id_kasir'] != null ? map['id_kasir'] as int : null,
-      namaKasir: map['nama_kasir'] != null ? map['nama_kasir'] as String : null,
-      transactionTime: map['transaction_time'] != null
-          ? map['transaction_time'] as String
-          : null,
-      isSync: map['is_sync'] != null ? map['is_sync'] as int : null,
+      id: map['id']?.toInt(),
+      paymentAmount: map['payment_amount']?.toInt() ?? 0,
+      subTotal: map['sub_total']?.toInt() ?? 0,
+      tax: map['tax']?.toInt() ?? 0,
+      discount: map['discount']?.toInt() ?? 0,
+      serviceCharge: map['service_charge']?.toInt() ?? 0,
+      total: map['total']?.toInt() ?? 0,
+      paymentMethod: map['payment_method'] ?? '',
+      totalItem: map['total_item']?.toInt() ?? 0,
+      idKasir: map['id_kasir']?.toInt() ?? 0,
+      namaKasir: map['nama_kasir'] ?? '',
+      transactionTime: map['transaction_time'] ?? '',
+      isSync: map['is_sync']?.toInt() ?? 0,
       orderItems: [],
     );
   }

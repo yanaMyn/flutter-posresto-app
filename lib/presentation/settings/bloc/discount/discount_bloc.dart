@@ -14,7 +14,7 @@ class DiscountBloc extends Bloc<DiscountEvent, DiscountState> {
   DiscountBloc({DiscountRepository? discountRepository})
       : discountRepository = discountRepository ?? DiscountRepository(),
         super(const _Initial()) {
-    on<DiscountEvent>((event, emit) async {
+    on<_GetDiscounts>((event, emit) async {
       emit(const _Loading());
       final result = await this.discountRepository.getDiscount();
       result.fold(
